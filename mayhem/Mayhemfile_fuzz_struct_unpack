@@ -1,0 +1,8 @@
+project: savantenvs/cpython3
+target: fuzz_struct_unpack
+cmds:
+  - cmd: /mayhem/fuzz_struct_unpack
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/testsuite

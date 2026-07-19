@@ -1,0 +1,9 @@
+project: savantenvs/cpython3
+target: fuzz_sre_compile
+cmds:
+  - cmd: /mayhem/fuzz_sre_compile
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_sre_compile.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/testsuite

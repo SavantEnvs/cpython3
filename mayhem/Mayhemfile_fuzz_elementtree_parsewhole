@@ -1,0 +1,9 @@
+project: savantenvs/cpython3
+target: fuzz_elementtree_parsewhole
+cmds:
+  - cmd: /mayhem/fuzz_elementtree_parsewhole
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_elementtree_parsewhole.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/testsuite
