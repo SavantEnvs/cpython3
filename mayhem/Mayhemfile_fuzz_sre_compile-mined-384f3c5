@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/cpython3/fuzz-sre-compile
+project: savantenvs/cpython3
+target: fuzz_sre_compile-mined-384f3c5
+cmds:
+  - cmd: /mayhem/fuzz_sre_compile
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_sre_compile-mined-384f3c5/fuzz_sre_compile.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sre_compile-mined-384f3c5/testsuite
